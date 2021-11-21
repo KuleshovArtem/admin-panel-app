@@ -234,11 +234,4 @@ body{
     flex: 0 0 3rem;
     /* background-color: var(--Middle-background); */
 } 
-.table__body{
-    flex: 1 1 auto; 
-    /* background-color:var(--Light-background); */
-}
-.table__footer{
-    flex: 0 0 3rem;
-    /* background-color: var(--Middle-background); */
-}
+
