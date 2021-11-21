@@ -14,6 +14,9 @@
     --Light-background:#A8A8FF;
     --Middle-background:#8055FF;
 }
+body{
+    min-height: 100vh;
+}
 .main-wrapper{
     display: flex;
     flex-direction:column;
@@ -229,13 +232,13 @@
 }
 .table__header{
     flex: 0 0 3rem;
-    background-color: var(--Middle-background);
+    /* background-color: var(--Middle-background); */
 } 
 .table__body{
     flex: 1 1 auto; 
-    background-color:var(--Light-background);
+    /* background-color:var(--Light-background); */
 }
 .table__footer{
     flex: 0 0 3rem;
-    background-color: var(--Middle-background);
+    /* background-color: var(--Middle-background); */
 }
