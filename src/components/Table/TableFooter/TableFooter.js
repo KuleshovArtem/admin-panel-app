@@ -1,4 +1,4 @@
-import "../TableFooter/TableFooter.css"
+import "./TableFooter.css"
 
 export const TableFooter = () => {
     return (

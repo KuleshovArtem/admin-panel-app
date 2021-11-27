@@ -1,8 +1,6 @@
-import { Checkbox } from "../Checkbox/Checkbox"
-import '../TableHeader/TableHeader.css'
-const IcoTriangle ={
+import {Checkbox} from "..//..//Checkbox/Checkbox"
+import './TableHeader.css'
 
-}
 
 export const TableHeader = () => {
     return (
