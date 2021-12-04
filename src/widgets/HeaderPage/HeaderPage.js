@@ -1,4 +1,4 @@
-import { ThemeSwitcher } from "../ThemeSwitcher/Theme-switcher";
+import { ThemeSwitcher } from "..//..//components/ThemeSwitcher/Theme-switcher";
 
 export const HeaderPage = () =>{
     return(

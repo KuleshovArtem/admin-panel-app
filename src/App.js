@@ -1,21 +1,41 @@
-import { HeaderPage } from "./components/Header/HeaderPage"
-import { Table } from "./components/Table/Table";
-import { FilterRow } from "./components/FilterRow/FilterRow";
-import './styles/reset.css'
-import './styles/style.css'
+import React from 'react';
+import { connect } from 'react-redux';
+
+import './styles/reset.css';
+import './styles/style.css';
+import { HeaderPage, FilterRow, TableHeader, TableOrder, TableFooter } from './widgets';
 
 
 
-function App() {
+function App({ordersList, filterOrder, status}) {
   return (
     <div className="page">
         <div className="main-wrapper">
             <HeaderPage/>
             <FilterRow/>
-            <Table/>
+            <div className="table">
+              <TableHeader/>
+              <TableOrder
+                ordersList={ordersList.filter((order)=> order.orderId.includes(filterOrder))}
+                // ordersList={ordersList.filter((order) => order.orderId.includes(filterOrder) && order.orderStatus.includes(status))}
+                />
+              <TableFooter/>         
+             </div>
         </div>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = function (state) {
+  return{
+    filterOrder: state.filterReducer.filterOrder,
+    status: state.orderListReducer.status,
+    ordersList: state.orderListReducer.ordersList,
+  }
+}
+
+export default connect (mapStateToProps) (App);
+
+
+
+

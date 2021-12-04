@@ -1,7 +1,7 @@
-import { Checkbox } from '../../Checkbox/Checkbox';
-import './TebleOrderItem.css'
+import { Checkbox } from '../../components/Checkbox/Checkbox';
+import './TebleOrderRow.css'
 
-export const TebleOrderItem = (props) => {
+export function TebleOrderRow (props) {
     const {
         orderId,
         orderDate,

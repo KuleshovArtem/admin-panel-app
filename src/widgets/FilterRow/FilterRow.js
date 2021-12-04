@@ -1,5 +1,5 @@
-import { FilterRowMain } from "../FilterRowMain/FilterRowMain";
-import { FilterRowExpansion } from "../FilterRowExpansion/FilterRowExpansion";
+import { FilterRowMain } from "./FilterRowMain";
+import { FilterRowExpansion } from "./FilterRowExpansion";
 
 export const FilterRow = () => {
     return (

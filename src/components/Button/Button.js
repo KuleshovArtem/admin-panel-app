@@ -1,11 +1,3 @@
-import { ReactComponent as IconRefresh } from "../icons/refresh.svg";
-
-
-const icons = [
-    <IconRefresh className="button-icon"/>,
-];
-
-
 export const Button = () => {
     return (
         <button class="button button_medium-icon button_basic">
