@@ -1,8 +1,15 @@
-import {ORDER_FILTER_SET_ORDER_ID_FILTER, ORDER_FILTER_SET_ORDER_STATUS_FILTER} from '..//actionsTypes' 
+import {
+    ORDER_FILTER_SET_ORDER_ID_FILTER, 
+    ORDER_FILTER_SET_ORDER_STATUS_FILTER,
+    ORDER_FILTER_SET_START_DATE_FILER,
+
+}
+ from '..//actionsTypes' 
 
 const initState = {
     filterOrder: '',
     status: '',
+    startDate: '',
     
 
 }
@@ -18,9 +25,18 @@ export function filterReducer (initialState = initState, action){
         case ORDER_FILTER_SET_ORDER_STATUS_FILTER: {
             return {
                 ...initialState,
-                status:action.isChecked
+                status: action.isChecked ? 'Выполнен' : '',
+                // фильтрация по чекбоксу (в заголовке таблицы комент для подключения) НЕ ПОДКЛЮЧЕН
             }
         }
+        case ORDER_FILTER_SET_START_DATE_FILER: {
+            return {
+                ...initialState,
+                startDate: action.startDateFilter //условие !!! НЕ ПОДКДЮЧЕН
+
+            }
+        }
+          
 
         default:
             return initialState     

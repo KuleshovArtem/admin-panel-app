@@ -1,11 +1,8 @@
-// import React, {useState} from 'react'       
 import {TebleOrderRow} from './TebleOrderRow'
 import "./TableOrder.css"
 
-// import ordersList from '../..//list.json'
-
 export function TableOrder ({ordersList}) {
-    return(
+    return (
         <div className="table__order">
             {ordersList.map((order) => <TebleOrderRow {...order}/>)}
         </div>

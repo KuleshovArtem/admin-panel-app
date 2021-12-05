@@ -171,21 +171,8 @@ body{
     background-color: var(--light-blue-color);
 }
 
-.filter-row-expansion{
-    display: flex;
-    height: 5.5rem;
-    padding: 0.5rem 1rem;
-    margin-bottom: 2rem;
-    background-color: var(--light-gray-blue-color);
-}
-.filter-row-expansion__date-entry{
-    display: flex;
-    flex-direction: column;
-    width: 18rem;   
-}
-.filter-row-expansion__input-group{
-    display: flex;
-}
+
+
 .input__date{
     padding: 0.5rem 0rem 0.5rem 0rem;
     display: flex;
@@ -228,7 +215,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 100%;
-    border: 2px solid var(--Middle-background);
+    /* border: 2px solid var(--Middle-background); */
 }
 .table__header{
     flex: 0 0 3rem;

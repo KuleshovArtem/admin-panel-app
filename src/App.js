@@ -1,13 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { selectors } from './data';
+
 import './styles/reset.css';
 import './styles/style.css';
 import { HeaderPage, FilterRow, TableHeader, TableOrder, TableFooter } from './widgets';
 
 
-
-function App({ordersList, filterOrder, status}) {
+// function App({ordersList, filterOrder, status}) {
+function App({ordersList}) {
   return (
     <div className="page">
         <div className="main-wrapper">
@@ -16,8 +18,8 @@ function App({ordersList, filterOrder, status}) {
             <div className="table">
               <TableHeader/>
               <TableOrder
-                ordersList={ordersList.filter((order)=> order.orderId.includes(filterOrder))}
-                // ordersList={ordersList.filter((order) => order.orderId.includes(filterOrder) && order.orderStatus.includes(status))}
+                  // ordersList={ordersList.filter((order) => order.orderId.includes(filterOrder) && order.orderStatus.includes(status))}  рабочий вариант
+                  ordersList={ordersList}
                 />
               <TableFooter/>         
              </div>
@@ -28,9 +30,10 @@ function App({ordersList, filterOrder, status}) {
 
 const mapStateToProps = function (state) {
   return{
-    filterOrder: state.filterReducer.filterOrder,
-    status: state.orderListReducer.status,
-    ordersList: state.orderListReducer.ordersList,
+    ordersList: selectors.getResultOrders(state),
+    // filterOrder: state.filterReducer.filterOrder,
+    // status: state.filterReducer.status,
+    // ordersList: state.orderListReducer.ordersList,
   }
 }
 

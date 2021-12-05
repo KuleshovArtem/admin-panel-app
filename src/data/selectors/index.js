@@ -1,0 +1,1 @@
+export {getResultOrders} from './OrderListSelector'
