@@ -10,6 +10,7 @@
   --shadow-blue-button:0rem 0.5rem 1.5rem rgba(0, 0, 0, 0.1), 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 0rem 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
   --font-size:0.8125rem;
   --Line-height:1rem;
+  --dark-blue-color:#0d7eee;
   }
   .table__header {
     display: flex;
@@ -31,6 +32,18 @@
     padding-left: 0.75rem;
     height: 3rem;
     cursor: pointer;
+  }
+  .table__header-button{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+  }
+  .table__header-button:hover{
+    background-color: var(--dark-blue-color);
   }
   .table__header-item:nth-child(2) {
     flex-basis: 10%;

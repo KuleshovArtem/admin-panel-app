@@ -10,7 +10,9 @@ export const FilterRowExpansion = () => {
             <FilterRowExpansionDate/> 
             <FilterRowExpansionStatus/>  
             <FilterRowExpansionSum/>
-            <Button/>     
+            <Button
+                title='Применить' 
+                className="button-blue-revers" />     
         </div>
     );
 };

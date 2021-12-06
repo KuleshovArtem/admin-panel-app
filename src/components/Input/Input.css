@@ -11,6 +11,20 @@
     --font-size:0.8125rem;
     --Line-height:1rem;
 }
+
+.input__entry{
+    display: flex;
+    align-items: center;
+    width: 16rem;
+    height: 2rem;
+    border: 0.0625rem solid;
+    border-radius: 0.25rem;
+    border-color: var(--blue-color);
+    background-color: var(--white-color); 
+}
+
+
+
 .input__date{
     padding: 0.5rem 0rem 0.5rem 0rem;
     margin-bottom: 3.5rem;
@@ -41,12 +55,13 @@
     line-height: 1rem;
     width: 100%;
     }
-.input__date-area_disabled{
+.input__date-area::placeholder{
+    color: var(--light-blue-color);
+}      
+/* .input__date-area_disabled{
         background-color: var(--blue-color);
     }
-.input__date-area_empty::placeholder{
-    color: var(--light-blue-color);
-    }  
+
 .input__date-area_incorrect::placeholder{
         color: var(--black-color);
     }  
@@ -62,7 +77,7 @@
 .input__entry-field_disabled {
     border-color: var(--light-blue-color);
     background-color: var(--blue-color);
-    }
+    } */
  .input__button{
      background-color: transparent;
      cursor: pointer;

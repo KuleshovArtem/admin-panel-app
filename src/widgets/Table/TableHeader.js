@@ -18,20 +18,11 @@ export const TableHeader = () => {
         <div className="table__header">
             <ul className="table__header-list">
                 <li className="table__header-item">
-                <div>
-                    {/* <label>
-                        <input
-                            type="checkbox"
-                            onChange={(event) => {
-                                store.dispatch(actions.orderFilterSetOrderStatusFilterAction(event.currentTarget.checked))
-                            }}
-                        />
-                    </label> */}
-                </div>
                     <Checkbox/>
                 </li>
                 <li className="table__header-item">
                     <TableHeaderSort
+                        className="table__header-button"
                         title='#' 
                         onClick={()=> {store.dispatch(actions.OrderSortAction(ID_COLUMN))}}
                     />
@@ -39,30 +30,35 @@ export const TableHeader = () => {
                 </li>
                 <div className="table__header-item">
                     <TableHeaderSort
+                        className="table__header-button"
                         title='Дата' 
                         onClick={()=> {store.dispatch(actions.OrderSortAction(DATE_COLUMN))}}
                     />
                 </div>
                 <li className="table__header-item">
                     <TableHeaderSort
+                        className="table__header-button"
                         title='Статус' 
                         onClick={()=> {store.dispatch(actions.OrderSortAction(STATUS_COLUMN))}}
                     />
                 </li>
                 <li className="table__header-item">
                     <TableHeaderSort
+                        className="table__header-button"
                         title='Позиция' 
                         onClick={()=> {store.dispatch(actions.OrderSortAction(POSITION_COLUMN))}}
                     />
                 </li>
                 <li className="table__header-item">
                     <TableHeaderSort
+                        className="table__header-button"
                         title='Сумма' 
                         onClick={()=> {store.dispatch(actions.OrderSortAction(SUM_COLUMN))}}
                     />
                 </li>
                 <li className="table__header-item">
                     <TableHeaderSort
+                        className="table__header-button" 
                         title='ФИО Покупателя' 
                         onClick={()=> {store.dispatch(actions.OrderSortAction(FULL_NAME_USER_COLUMN))}}
                     /> 
@@ -72,7 +68,15 @@ export const TableHeader = () => {
     );
 };
 
-{/* <span className="table__header-text">Статус</span>
-<svg className="table__header-img"  viewBox="0 0 16 16" fill="#EBF0F5" stroke="none">
-    <path d="M5 6H11V6.5L8.25 11H7.75L5 6.5V6Z" stroke="none"/>
-</svg> */}
+
+
+{/* <div>
+<label>
+    <input
+        type="checkbox"
+        onChange={(event) => {
+            store.dispatch(actions.orderFilterSetOrderStatusFilterAction(event.currentTarget.checked))
+        }}
+    />
+</label>
+</div> */}

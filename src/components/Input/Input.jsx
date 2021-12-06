@@ -1,10 +1,10 @@
-import './Input.module.css'
+import './Input.css'
 
-export const Input =() => {
+export const Input =({placeholder}) => {
     return(
-        <div className="input__entry-field">
+        <div className="input__entry">
             <label>
-                <input type='text'placeholder="что-то" className="input__date-area" />
+                <input type='text'placeholder={placeholder} className="input__date-area" />
             </label>
         </div> 
     );

@@ -3,10 +3,10 @@ import cx from 'classnames'
 import styles from './Button.module.css'
 
 
-export const Button = () => {
+export const Button = ({className,title}) => {
     return (
-        <button >
-            <div >#</div>
+        <button className={className}>
+            <div >{title}</div>
         </button> 
     );
 };

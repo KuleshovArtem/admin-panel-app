@@ -1,4 +1,5 @@
 import { Button } from "../../components/Button/Button"
+import './TableFooterBunchActions.css'
 
 export const TableFooterBunchActions = () => {
     return(
