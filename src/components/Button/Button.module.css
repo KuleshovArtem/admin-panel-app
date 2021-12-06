@@ -1,0 +1,80 @@
+:root{
+    --blue-color:#459DF5;
+    --light-blue-color:#BAD8F5;
+    --light-gray-blue-color:#EBF0F5;
+    --black-color:#000000;
+    --purple-color:#8055FF;
+    --gray-color:#E5E5E5;
+    --white-color:#FFFFFF;
+    --red-color:#F53152;
+    --shadow-blue-button:0rem 0.5rem 1.5rem rgba(0, 0, 0, 0.1), 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 0rem 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+    --font-size:0.8125rem;
+    --Line-height:1rem;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 1rem;
+    margin-right: 3rem;
+    border: none;
+    color: var(--white-color);
+    cursor: pointer
+}
+
+.button__icon_medium{
+    margin-right: 0.5rem;
+}
+.button__icon_small{
+    margin-right: 0.25rem;
+}
+.button__icon_basic{
+    fill: var(--white-color);
+}
+.button__icon_second{
+    fill:var(--blue-color)
+}
+.button_medium-icon{
+    width: 7rem;
+    height: 2rem;
+}
+.button_medium-noIcon{
+    width: 5.5rem;
+    height: 2rem;
+}
+.button_medium-onlyIcon{
+    width: 2rem;
+    height: 2rem;
+}
+.button_small-icon{
+    width: 5.75rem;
+    height: 1.5rem;
+}
+.button_small-noIcon{
+    width: 4.5rem;
+    height: 1.5rem;
+}
+.button_small-onlyIcon{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.button_basic{
+    background-color: var(--blue-color);
+    border-radius: 0.25rem; 
+}
+.button_basic:hover{
+    box-shadow: 0 0 0.1rem 0.25rem var(--white-color);
+}
+.button_second{
+    background-color:transparent;
+    border-radius: 0.25rem;
+}
+.button_second:hover{
+    box-shadow: 0 0 0.1rem 0.25rem var(--light-blue-color);
+}
+.button_disabled{
+    background-color:transparent;
+    border-radius: 0.25rem;
+}

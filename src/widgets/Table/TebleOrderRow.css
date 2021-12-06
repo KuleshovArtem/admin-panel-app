@@ -1,0 +1,32 @@
+.table__header-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+.table__header-item {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-basis: 3%;
+    padding-left: 0.75rem;
+    height: 3rem;
+    cursor: pointer;
+  }
+  .table__header-item:nth-child(2) {
+    flex-basis: 10%;
+  }
+  .table__header-item:nth-child(3) {
+    flex-basis: 16.5%;
+  }
+  .table__header-item:nth-child(4) {
+    flex-basis: 16.5%;
+  }
+  .table__header-item:nth-child(5) {
+    flex-basis: 9%;
+  }
+  .table__header-item:nth-child(6) {
+    flex-basis: 12%;
+  }
+  .table__header-item:nth-child(7) {
+    flex-basis: 33%;
+  }
