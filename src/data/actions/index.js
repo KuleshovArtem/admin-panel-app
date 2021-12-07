@@ -5,16 +5,23 @@ import {OrderSortAction} from './OrderSortAction';
 
 import {OrderFilterSetStartDateFilterAction} from './OrderFilterSetStartDateFilterAction';
 
- import { OrderPagingFirstPage } from './OrderPagingFirstPage';
- import { OrderPagingLastPage } from './OrderPagingLastPage'
+ import { OrderPagingFirstPageAction } from './OrderPagingFirstPageAction';
+ import { OrderPagingLastPageAction } from './OrderPagingLastPageAction';
+ import {OrderPagingSecondPageAction} from './OrderPagingSecondPageAction';
+ import {OrderPagingThirdPageAction} from './OrderPagingThirdPageAction'
+
+
+
 export {
     orderFilterClearOrderIdFilterAction,
     orderFilterSetOrderIdFilterAction,
     orderFilterSetOrderStatusFilterAction,
     OrderSortAction,
     OrderFilterSetStartDateFilterAction,
-    OrderPagingFirstPage,
-    OrderPagingLastPage,
+    OrderPagingFirstPageAction,
+    OrderPagingLastPageAction,
+    OrderPagingSecondPageAction,
+    OrderPagingThirdPageAction,
 
 }
 

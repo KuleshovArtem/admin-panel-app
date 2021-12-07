@@ -9,9 +9,7 @@ import {
 const initState = {
     filterOrder: '',
     status: '',
-    startDate: '',
-    
-
+    startDate: '',  
 }
 
 export function filterReducer (initialState = initState, action){
