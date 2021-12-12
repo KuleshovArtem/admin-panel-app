@@ -6,7 +6,9 @@ import { TableOrder } from './Table/TableOrder' ;
 import { TableFooter } from './Table/TableFooter';
 
 import { TableFooterBunchActions } from './Table/TableFooterBunchActions';
-import { TableFooterPagination } from './Table/TableFooterPagination'
+import { TableFooterPagination } from './Table/TableFooterPagination';
+
+import { Form } from './Form/Form';
 
 
 
@@ -21,5 +23,6 @@ export {
     TableFooter,
     TableFooterBunchActions,
     TableFooterPagination,
+    Form,
 
 }

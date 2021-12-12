@@ -1,18 +1,27 @@
+import {actions, store} from '..//..//data'
+
 import { Checkbox } from '../../components/Checkbox/Checkbox';
 import './TebleOrderRow.css'
 
 export function TebleOrderRow (props) {
     const {
-        orderId,
-        orderDate,
-        orderStatus,
-        orderPosition,
-        orderSum,
-        fullNameUser,
+        order: {
+            orderId,
+            orderDate,
+            orderStatus,
+            orderPosition,
+            orderSum,
+            fullNameUser,
+        }
+        
     } = props
   
     return(
-        <div className="table__header-list">
+        <div 
+        className="table__header-list" 
+        onClick={()=>store.dispatch(actions.OrderListItemClickAction(props.order))} 
+        role='button'
+        >
             <div className='table__header-item'>
                 <Checkbox/>
             </div>

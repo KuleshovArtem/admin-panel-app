@@ -5,7 +5,7 @@ import { selectors } from './data';
 
 import './styles/reset.css';
 import './styles/style.css';
-import { HeaderPage, FilterRow, TableHeader, TableOrder, TableFooter } from './widgets';
+import { HeaderPage, FilterRow, TableHeader, TableOrder, TableFooter, Form } from './widgets';
 import { TableFooterBunchActions,TableFooterPagination } from './widgets'
 import { Pagination } from './components/Pagination/Pagination'
 
@@ -35,6 +35,9 @@ function App({ordersList, sizePege,ordersListLength}) {
               {/* <TableFooter/> */}
                         
              </div>
+        </div>
+        <div>
+          <Form/>
         </div>
     </div>
   );

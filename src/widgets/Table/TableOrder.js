@@ -4,7 +4,7 @@ import "./TableOrder.css"
 export function TableOrder ({ordersList}) {
     return (
         <div className="table__order">
-            {ordersList.map((order) => <TebleOrderRow {...order}/>)}
+            {ordersList.map((order) => <TebleOrderRow order={order}/>)}
         </div>
     );
 };
