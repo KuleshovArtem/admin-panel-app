@@ -1,8 +1,6 @@
 import {
-    ORDER_PAGING_FIRST_PAGE,
-    ORDER_PAGING_LAST_PAGE,
-    ORDER_PAGING_SECOND_PAGE,
-    ORDER_PAGING_THIRD_PAGE, 
+    ORDER_PAGING_PAGE,
+  
 } from '../actionsTypes'
 
 const initState = {
@@ -13,10 +11,10 @@ const initState = {
 
 export function PaginationReducer (initialState = initState, action){
     switch(action.type) {
-        case ORDER_PAGING_FIRST_PAGE: {
+        case ORDER_PAGING_PAGE: {
             return {
                 ...initialState,
-                currentPage:initialState.currentPage,
+                currentPage:action.newCurrentPage ,
                 size:initialState.size
             }
         }

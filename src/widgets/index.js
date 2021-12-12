@@ -5,6 +5,11 @@ import{TableHeader} from './Table/TableHeader' ;
 import { TableOrder } from './Table/TableOrder' ;
 import { TableFooter } from './Table/TableFooter';
 
+import { TableFooterBunchActions } from './Table/TableFooterBunchActions';
+import { TableFooterPagination } from './Table/TableFooterPagination'
+
+
+
 
 
 
@@ -14,4 +19,7 @@ export {
     TableHeader,
     TableOrder,
     TableFooter,
+    TableFooterBunchActions,
+    TableFooterPagination,
+
 }
