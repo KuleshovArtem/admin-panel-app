@@ -12,6 +12,8 @@ export function FormPure (props) {
       // orderPosition,
       orderSum,
       fullNameUser,
+      saveClick,
+      closeClick,
   } = props
 
   
@@ -21,7 +23,9 @@ export function FormPure (props) {
             <div className='formHeader'>
               <input value={orderId}
               /> 
-              <div> кнопка закрытия </div>
+              <div>
+                <button type='button' onClick={closeClick}>X</button>
+              </div>
             </div>
             <div className='formBody'>
               <label className='formBody__items' >
@@ -56,6 +60,9 @@ export function FormPure (props) {
                   Статус заказ
                   <input value={orderStatus}/>
               </label>
+              <div>
+                <button type='button' onClick={saveClick}>Сохранить</button>
+              </div>
             </div> 
       </form>
   )
@@ -73,6 +80,12 @@ const mapStateToProps = (state) => {
   }
 }
 
-export const Form = connect(mapStateToProps)(FormPure);
+const mapDispatchToProps = (dispatch) => {
+  return {
+      saveClick: (updatedUser) => dispatch(actions.OrderListEditFormSeveClickAction(updatedUser)),
+      closeClick: () => dispatch(actions.OrderListEditFormCloseClickAction()),
+    }
+  }
 
-// , mapDispatchToProps
+export const Form = connect(mapStateToProps, mapDispatchToProps)(FormPure);
+

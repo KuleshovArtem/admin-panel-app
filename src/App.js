@@ -8,11 +8,9 @@ import './styles/style.css';
 import { HeaderPage, FilterRow, TableHeader, TableOrder, TableFooter, Form } from './widgets';
 import { TableFooterBunchActions,TableFooterPagination } from './widgets'
 import { Pagination } from './components/Pagination/Pagination'
+// import { getOrderId } from './data/selectors';
 
-
-
-// function App({ordersList, filterOrder, status}) {
-function App({ordersList, sizePege,ordersListLength}) {
+function App({ordersList,sizePege,ordersListLength,orderId}) {
   
   return (
     <div className="page">
@@ -22,7 +20,6 @@ function App({ordersList, sizePege,ordersListLength}) {
             <div className="table">
               <TableHeader/>
               <TableOrder
-                  // ordersList={ordersList.filter((order) => order.orderId.includes(filterOrder) && order.orderStatus.includes(status))}  рабочий вариант
                   ordersList={ordersList}
                 />
               <div className="table__footer">
@@ -31,13 +28,13 @@ function App({ordersList, sizePege,ordersListLength}) {
                 sizePege={sizePege}
                 totalOrders={ordersListLength.length}
               />
-              </div>
-              {/* <TableFooter/> */}
-                        
+              </div>          
              </div>
         </div>
         <div>
-          <Form/>
+          {
+            orderId !== "" && (<Form/>) 
+          }
         </div>
     </div>
   );
@@ -46,12 +43,10 @@ function App({ordersList, sizePege,ordersListLength}) {
 const mapStateToProps = function (state) {
   
   return{
-    // currentPage: selectors.getCurrentPage(state),
     sizePege: selectors.getSizePage(state),
     ordersList: selectors.getResultOrders(state),
-    // filterOrder: state.filterReducer.filterOrder,
-    // status: state.filterReducer.status,
-    ordersListLength: selectors.getOrderList(state)
+    ordersListLength: selectors.getOrderList(state),
+    orderId: selectors.getOrderId(state),
     
   }
 }
