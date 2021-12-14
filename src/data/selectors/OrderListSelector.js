@@ -19,10 +19,11 @@ let list = getOrderList(appState)
 
 let newList = list
 
-newList = sortBy(list, column) && list.filter((order) => order.orderId.includes(filterOrder))
+newList = sortBy(list, column)
 if (!ascending) {
     newList = newList.reverse();
 }
+newList = newList.filter((order) => order.orderId.includes(filterOrder))
 
 const currentPage = getCurrentPage(appState)
 const sizePege = getSizePage(appState)
