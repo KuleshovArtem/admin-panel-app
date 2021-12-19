@@ -1,9 +1,5 @@
 import './FilterRowMain.css'
 import {actions, store} from '..//..//data'
-// import { connect } from 'react-redux';
-// import { orderFilterSetOrderNumberAction } from '..//..//data/actions/index';
-
-
 
 export const FilterRowMain = () => {
     return (
@@ -36,11 +32,3 @@ export const FilterRowMain = () => {
 };
 
 
-
-// const [value, setValue] = useState('');
-//     const filterNumberOrderAndFullName = ordersList.filter(order=>{
-//         return order.orderId.includes(value)
-//     }
-//         )
-
-// onChange={(event) => setValue(event.target.value)}

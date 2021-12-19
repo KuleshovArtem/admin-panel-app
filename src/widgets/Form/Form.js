@@ -2,9 +2,7 @@ import {actions, selectors} from '..//..//data';
 import { connect } from 'react-redux';
 import { Button } from '../../components/Button/Button';
 import { Icons } from '../../components/Icons';
-
 import './Form.css'
-
 
 export function FormPure (props) {
   const {

@@ -8,7 +8,7 @@ import { HeaderPage, FilterRow, TableHeader, TableOrder, Form, TableFooterBunchA
 import { Pagination } from './components/Pagination/Pagination'
 
 
-function App({ordersList, sizePege,ordersListLength,}) {
+function App({sizePege,ordersListLength,}) {
   
   return (
     <div className="page">
@@ -23,7 +23,6 @@ function App({ordersList, sizePege,ordersListLength,}) {
                 <Pagination
                 sizePege={sizePege}
                 totalOrders={ordersListLength.length}
-                // totalOrders={ordersList.length}
               />
               </div>          
              </div>
@@ -38,7 +37,6 @@ const mapStateToProps = function (state) {
     ordersList: selectors.getResultOrders(state), 
     sizePege: selectors.getSizePage(state),
     ordersListLength: selectors.getOrderList(state),
-    // orderId: selectors.getOrderId(state),
   }
 }
 

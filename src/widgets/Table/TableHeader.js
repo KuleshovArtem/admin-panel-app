@@ -67,16 +67,3 @@ export const TableHeader = () => {
         </div>
     );
 };
-
-
-
-{/* <div>
-<label>
-    <input
-        type="checkbox"
-        onChange={(event) => {
-            store.dispatch(actions.orderFilterSetOrderStatusFilterAction(event.currentTarget.checked))
-        }}
-    />
-</label>
-</div> */}

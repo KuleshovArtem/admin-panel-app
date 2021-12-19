@@ -10,10 +10,3 @@ export const FilterRowExpansionStatus = () => {
         </div>
     )
 };
-
-// {/* <label className="input__date" for="RowExpansionStatus"> 
-//                     <div className="input__entry-field input__entry-field_empty">
-//                         <input className="input__date-area input__date-area_empty" id="RowExpansionStatus" value="Введите"/> 
-//                         <button className="input__button input__button_incorrect"></button>                    
-//                     </div>
-//                 </label> */}
