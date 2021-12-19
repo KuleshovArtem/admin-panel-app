@@ -15,16 +15,22 @@
     --Middle-background:#8055FF;
 }
 body{
+    font-family: 'Ubuntu', sans-serif;
     min-height: 100vh;
     font-size:0.8125rem;
     Line-height:1rem;
+}
+.page{
+    display: flex;
+    
 }
 .main-wrapper{
     display: flex;
     flex-direction:column;
     padding: 2rem 3rem 0rem;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     height: 100vh;
+    width: 100%;
 }
 /* header */
 .header{

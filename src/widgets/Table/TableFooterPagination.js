@@ -7,8 +7,6 @@ import { Pagination } from "../../components/Pagination/Pagination"
 import './TableFooterPagination.css';
 import { compact } from 'lodash';
 
-// import {actions, store,} from '../../data'
-// import { Button } from "../../components/Button/Button"
 
 
 
@@ -27,14 +25,4 @@ export function TableFooterPagination (currentPage, sizePege, ordersList) {
     )
 }
 
-// const mapStateToProps = function (state) {
-//     console.log(state)
-//     return{
-//         currentPage: selectors.getCurrentPage(state),
-//         sizePege: selectors.getSizePage(state),
-//         ordersList: selectors.getResultOrders(state),
-        
-//     }
-//   }
-  
-//   export default connect (mapStateToProps)(TableFooterPagination);
+

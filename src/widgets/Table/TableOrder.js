@@ -1,7 +1,10 @@
 import {TebleOrderRow} from './TebleOrderRow'
 import "./TableOrder.css"
 
-export function TableOrder ({ordersList}) {
+import { selectors } from '..//..//data';
+import { connect } from 'react-redux';
+
+export function TableOrderPure ({ordersList}) {
     return (
         <div className="table__order">
             {ordersList.map((order) => <TebleOrderRow order={order}/>)}
@@ -9,22 +12,16 @@ export function TableOrder ({ordersList}) {
     );
 };
 
+const mapStateToProps = function (state) {
+  
+    return{
+      ordersList: selectors.getResultOrders(state),  
+    }
+  }
 
-// export const TableOrder = () =>{
-    
-//     const ordersRender = ordersList.map((order) =>{
-//         return(
-//             <TebleOrderRow {...order}/>
-//         );
-//     });
-//     return(
-//         <div>
-//             {ordersRender}
-//         </div>
-//     )
-// }
+  export const TableOrder = connect(mapStateToProps)(TableOrderPure);
 
-//  <TableOrder ordersList={ordersList.filter((order) => order.orderId.includes('1'))} /> 
+
 
 
 

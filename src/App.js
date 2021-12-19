@@ -1,16 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import { selectors } from './data';
 
 import './styles/reset.css';
 import './styles/style.css';
-import { HeaderPage, FilterRow, TableHeader, TableOrder, TableFooter, Form } from './widgets';
-import { TableFooterBunchActions,TableFooterPagination } from './widgets'
+import { HeaderPage, FilterRow, TableHeader, TableOrder, Form, TableFooterBunchActions } from './widgets';
 import { Pagination } from './components/Pagination/Pagination'
-// import { getOrderId } from './data/selectors';
 
-function App({ordersList,sizePege,ordersListLength,orderId}) {
+
+function App({ordersList, sizePege,ordersListLength,}) {
   
   return (
     <div className="page">
@@ -19,35 +17,28 @@ function App({ordersList,sizePege,ordersListLength,orderId}) {
             <FilterRow/>
             <div className="table">
               <TableHeader/>
-              <TableOrder
-                  ordersList={ordersList}
-                />
+              <TableOrder/>
               <div className="table__footer">
                 <TableFooterBunchActions/>
                 <Pagination
                 sizePege={sizePege}
                 totalOrders={ordersListLength.length}
+                // totalOrders={ordersList.length}
               />
               </div>          
              </div>
         </div>
-        <div>
-          {
-            orderId !== "" && (<Form/>) 
-          }
-        </div>
+        <Form/>
     </div>
   );
 }
 
 const mapStateToProps = function (state) {
-  
   return{
+    ordersList: selectors.getResultOrders(state), 
     sizePege: selectors.getSizePage(state),
-    ordersList: selectors.getResultOrders(state),
     ordersListLength: selectors.getOrderList(state),
-    orderId: selectors.getOrderId(state),
-    
+    // orderId: selectors.getOrderId(state),
   }
 }
 

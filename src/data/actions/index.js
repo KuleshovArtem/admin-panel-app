@@ -10,6 +10,8 @@ import { OrderPagingPageAction } from './OrderPagingPageAction';
 import { OrderListItemClickAction } from './OrderListItemClickAction'
 import { OrderListEditFormSeveClickAction } from './OrderListEditFormSeveClickAction';
 import { OrderListEditFormCloseClickAction } from './OrderListEditFormCloseClickAction';
+import { OrderListEditFormNameChangeAction } from './OrderListEditFormNameChangeAction';
+import { OrderListEditFormStatusChangeAction } from './OrderListEditFormStatusChangeAction';
 
 
 
@@ -24,6 +26,9 @@ export {
     OrderListItemClickAction,
     OrderListEditFormSeveClickAction,
     OrderListEditFormCloseClickAction,
+    OrderListEditFormNameChangeAction,
+    OrderListEditFormStatusChangeAction,
+
 
     
 

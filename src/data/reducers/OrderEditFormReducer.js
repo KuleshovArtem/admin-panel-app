@@ -1,4 +1,9 @@
-import {ORDER_LIST_ITEM_CLICK,ORDER_LIST_EDIT_FORM_CLOSE_CLICK} from '../actionsTypes'
+import {
+    ORDER_LIST_ITEM_CLICK,
+    ORDER_LIST_EDIT_FORM_CLOSE_CLICK,
+    ORDER_LIST_EDIT_FORM_NAME_CHANGE,
+    ORDER_LIST_EDIT_FORM_STATUS_CHANGE,
+} from '../actionsTypes'
 
 const initState = {
     orderId: '',
@@ -20,7 +25,20 @@ export function OrderEditFormReducer (initialState = initState, action){
         }
         case ORDER_LIST_EDIT_FORM_CLOSE_CLICK:{
             return{
-                ...initState
+                ...initState,
+            }
+        }
+        case ORDER_LIST_EDIT_FORM_NAME_CHANGE:{
+            return{
+                ...initialState,
+                fullNameUser: action.name,
+                
+            }
+        }
+        case ORDER_LIST_EDIT_FORM_STATUS_CHANGE:{
+            return{
+                ...initialState,
+                orderStatus: action.status,
             }
         }
         default:{
