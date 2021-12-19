@@ -23,7 +23,7 @@
     cursor: pointer
 }
 .button:hover{
-    box-shadow: 0 0 0.1rem 0.25rem var(--dark-blue-color);
+    box-shadow: 0 0 0.1rem 0.25rem var(--white-color);
 }
 .button_text{
     font-size: 0.8125rem;
@@ -97,7 +97,11 @@
     background-color: var(--red-color);
     color: var(--white-color);
 }
-
+.button_small_warning{
+    padding: 0.25rem 0.5rem;
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
 
 
 
