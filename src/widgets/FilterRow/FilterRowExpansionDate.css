@@ -17,4 +17,10 @@
 .filter-row-expansion__input-group{
     display: flex;
     align-items: center;
+    width: 100%;
+}
+.filterRowExpansionDate{
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
 }

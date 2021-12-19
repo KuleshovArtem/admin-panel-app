@@ -1,14 +1,16 @@
 import { Icons } from "../Icons";
+import './Button.css'
 
 export const Button = ({
     className,
-    title,
+    text,
     icon,
+    onClick,
 }) => {
     return (
-        <button className={className} type='button'>
+        <button className={`button ${className}`} type='button' onClick={onClick}>
             {Icons[icon]!==null ? Icons[icon] : <></>} 
-            <div >{title}</div>
+            <div className="button_text">{text}</div>
         </button> 
     );
 };

@@ -7,7 +7,7 @@ import './FilterRowExpansionDate.css'
 
 export const FilterRowExpansionDate = () => {
     return (
-        <div className="filter-row-expansion__date-entry">
+        <div className="filterRowExpansionDate">
             <div className="filter-row-expansion__text">Дата оформления</div>
             <div className="filter-row-expansion__input-group">
                 <Input 

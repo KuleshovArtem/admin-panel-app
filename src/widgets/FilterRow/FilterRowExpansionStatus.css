@@ -1,0 +1,5 @@
+.filterRowExpansionStatus{
+    display: flex;
+    flex-direction: column;
+    width: 22rem;  
+}

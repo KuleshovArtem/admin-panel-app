@@ -1,6 +1,7 @@
 :root{
     --blue-color:#459DF5;
     --light-blue-color:#BAD8F5;
+    --dark-blue-color:#0a4175;
     --light-gray-blue-color:#EBF0F5;
     --black-color:#000000;
     --purple-color:#8055FF;
@@ -15,26 +16,106 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    margin-bottom: 1rem;
-    margin-right: 3rem;
+    border-radius: 0.25rem; 
+    /* padding: 0; */
     border: none;
-    color: var(--white-color);
+    /* color: var(--white-color); */
     cursor: pointer
 }
+.button:hover{
+    box-shadow: 0 0 0.1rem 0.25rem var(--dark-blue-color);
+}
+.button_text{
+    font-size: 0.8125rem;
+	/* display: block; */
+	padding-left: 0.25rem;
+}
+.button .icon {
+    width: 1rem;
+    height: 1rem;
+    padding-left: 0.25rem;
+}
+             /* basic group */
+.button_medium_basic{
+    padding: 0.5rem 1rem;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    height: 2rem;
+}
+.button_medium_basic .icon {
+    fill: var(--white-color); 
+}
+.button_medium_basic_icon_only{
+    padding: 0.5rem;
+    /* fill: var(--white-color); */
+}
+.button_small_basic { 
+    padding: 0.25rem 0.5rem;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    height: 1.5rem;
+}
+.button_small_basic .icon {
+    fill: var(--white-color); 
+}
+.button_small_basic_icon_only{
+    padding: 0.25rem;
+    /* fill: var(--white-color); */
+}
+            /* transparent group */
+.button_medium_transparent{
+    padding: 0.5rem 1rem;
+    background-color:transparent;
+    color: var(--blue-color);
+    height: 2rem;
+}
+.button_medium_transparent .icon {
+    fill:var(--blue-color)
+}
+.button_small_transparent {
+    padding: 0.25rem 0.5rem;
+    background-color:transparent;
+    color: var(--white-color);
+    height: 1.5rem;
+}
+.button_small_transparent .icon {
+    fill: var(--blue-color); 
+}
 
-.button__icon_medium{
+.button_disabled{
+    padding: 0.5rem 1rem;
+    background-color:transparent;
+    color: var(--black-color);
+}
+
+
+
+
+
+.button_medium_warning{
+    padding: 0.5rem 1rem;
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
+
+
+
+
+
+
+
+/* .button__icon_medium{
     margin-right: 0.5rem;
 }
 .button__icon_small{
     margin-right: 0.25rem;
-}
-.button__icon_basic{
+} */
+/* .button__icon_basic{
     fill: var(--white-color);
-}
-.button__icon_second{
+} */
+/* .button__icon_second{
     fill:var(--blue-color)
-}
+} */
 .button_medium-icon{
     width: 7rem;
     height: 2rem;
@@ -60,21 +141,21 @@
     height: 1.5rem;
 }
 
-.button_basic{
+/* .button_basic{
     background-color: var(--blue-color);
     border-radius: 0.25rem; 
-}
-.button_basic:hover{
+} */
+/* .button_basic:hover{
     box-shadow: 0 0 0.1rem 0.25rem var(--white-color);
-}
-.button_second{
+} */
+/* .button_second{
     background-color:transparent;
     border-radius: 0.25rem;
-}
-.button_second:hover{
+} */
+/* .button_second:hover{
     box-shadow: 0 0 0.1rem 0.25rem var(--light-blue-color);
-}
-.button_disabled{
+} */
+/* .button_disabled{
     background-color:transparent;
     border-radius: 0.25rem;
-}
+} */
